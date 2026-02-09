@@ -27,3 +27,13 @@ jobs:
 
     - name: Executar testes
       run: npm test
+
+    - name: Gerar relatórios
+      run: npm run report:generate   
+
+    - name: Publicar relatorios no Gh Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+
