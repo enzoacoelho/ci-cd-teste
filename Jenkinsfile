@@ -23,7 +23,7 @@ pipeline {
         stage('Execução ds testes'){
             steps {
                 echo 'Executando os testes...'
-                bat 'npm test'
+                bat 'chcp 65001 && npx cypress run --reporter spec'
             }
 
         }
