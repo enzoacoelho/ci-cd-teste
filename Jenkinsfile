@@ -1,16 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'nodejs'
-    }
-
-    environment {
-        JAVA_TOOL_OPTIONS = "-Dfile.encoding=UTF-8"
-        LANG = "pt_BR.UTF-8"
-        NO_COLOR = "1"
-    }
-
     stages {
         stage('Instalação das dependencias') {
              steps {
