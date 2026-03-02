@@ -2,15 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Instalação das dependencias')
-            steps {
+        stage('Instalação das dependencias') {
+             steps {
                 bat 'npm install'
             }
+        }
+           
 
-        stage('Execução ds testes')
+        stage('Execução ds testes'){
             steps {
                 bat 'npm test'
             }
+
+        }
+            
     }        
 
 }
