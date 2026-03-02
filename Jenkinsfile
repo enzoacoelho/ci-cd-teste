@@ -13,7 +13,7 @@ pipeline {
         stage('Execução ds testes'){
             steps {
                 echo 'Executando os testes...'
-                bat 'set MOCHA_REPORTER_OPTIONS=useUnicode=false && npx cypress run --reporter spec'
+                bat 'npx cypress run --reporter teamcity'
             }
 
         }
