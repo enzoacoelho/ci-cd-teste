@@ -13,7 +13,7 @@ pipeline {
         stage('Execução ds testes'){
             steps {
                 echo 'Executando os testes...'
-                bat 'chcp 65001 && npx cypress run --quiet --reporter spec'
+                bat 'set MOCHA_REPORTER_OPTIONS=useUnicode=false && npx cypress run --reporter spec'
             }
 
         }
