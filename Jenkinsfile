@@ -23,7 +23,7 @@ pipeline {
         stage('Execução ds testes'){
             steps {
                 echo 'Executando os testes...'
-                bat 'npx cypress run --reporter junit'
+                bat 'npm test'
             }
 
         }
